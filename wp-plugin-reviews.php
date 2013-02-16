@@ -4,12 +4,15 @@ Plugin Name: WP Plugin Reviews
 Plugin URI: http://sudarmuthu.com/wordpress/wp-plugin-reviews
 Description: Displays the latest reviews of a WordPress Plugin in the sidebar.
 Author: Sudar
-Version: 0.1
+Version: 0.2
 Author URI: http://sudarmuthu.com/
 Text Domain: wp-plugin-reviews
 
 === RELEASE NOTES ===
-2013-02-11 – v0.1 – Initial Release
+2013-02-11 - v0.1 - (Dev Time: 3 hours)
+                  - Initial Release
+2013-02-16 - v0.2 - (Dev Time: 0.5 hour)
+                  - Generated Pot file
 */
 
 /**
@@ -57,8 +60,7 @@ class WP_Plugin_Reviews {
         }
 
         $key = self::CACHE_KEY_SLUG . $plugin;
-        //delete_transient($key);
-        //if (false === ( $output = get_transient( $key ) ) ) {
+        if (false === ( $output = get_transient( $key ) ) ) {
             require_once(ABSPATH . WPINC . '/feed.php');
             $rss = fetch_feed(self::REVIEW_BASE_URL . $plugin);
 
@@ -89,16 +91,16 @@ class WP_Plugin_Reviews {
                     }
 
                     $output .= '<div class = "plugin-review">';
-                    $output .= '<blockquote>' . $content . '</blockquote>';
+                    $output .= '<blockquote class = "plugin-review-text">' . $content . '</blockquote>';
                     $output .= '<span class = "plugin-review-author" style = "float:right">' . '- <a href = "' . esc_url($rss_item->get_permalink()) . '">' . $author_name . '</a></span><br> ';
                     //$output .= __('on', 'wp-plugin-reviews') . ' ' . $rss_item->get_date('j F Y | g:i a'); 
                     $output .= '</div>';
                 }
 
                 $output .= '</div>';
-                //set_transient($key, $output, 12 * HOUR_IN_SECONDS);
+                set_transient($key, $output, 12 * HOUR_IN_SECONDS);
             }
-            //}
+        }
 
         return $output;
     }
@@ -198,7 +200,7 @@ class WP_Plugin_Review_Widget extends WP_Widget {
  * 
  * @param string $plugin
  */
-function get_plugin_reviews($plugin, $repo, $count = 5) {
+function get_plugin_reviews($plugin, $count = 5) {
     global $wp_plugin_reviews;
     return $wp_plugin_reviews->get_plugin_reviews($plugin, $count);
 }
