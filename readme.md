@@ -1,13 +1,13 @@
-﻿=== WP Plugin Reviews ===
-Contributors: sudar 
-Tags: plugin, review, widget
-Requires at least: 3.5
-Tested up to: 3.5.1
-Stable tag: 0.2
+﻿# WP Plugin Reviews #
+**Contributors:** sudar 
+**Tags:** plugin, review, widget
+**Requires at least:** 3.5
+**Tested up to:** 3.5.1
+**Stable tag:** 0.3
 
 Displays the latest reviews of a WordPress Plugin in the sidebar.
 
-== Description ==
+## Description ##
 Displays the latest reviews of a WordPress Plugin in the sidebar.
 
 ### Features
@@ -55,41 +55,53 @@ The development of the Plugin happens over at [github](https://github.com/sudar/
 
 If you are not familiar with either git or Github then refer to this [guide to see how fork and send pull request](http://sudarmuthu.com/blog/contributing-to-project-hosted-in-github).
 
-Support for the Plugin is available from the [Plugin's home page][1]. If you have any questions or suggestions, do leave a comment there or contact me in [twitter][2].
+If you are looking for ideas, then you can start with one of the following TODO items :)
+
+### TODO
+
+- Shortcode support
+- Make the output of widget content plugable
+
+### Support
+
+- If you have found a bug/issue or have a feature request, then post them in [github issues](https://github.com/sudar/wp-plugin-reviews/issues)
+- If you have a question about usage or need help to troubleshoot, then post in WordPress forums or leave a comment in [Plugins's home page][1]
+- If you like the Plugin, then kindly leave a review/feedback at [WordPress repo page][6].
+- If anything else, then contact me in [twitter][2].
 
 ### Stay updated
 
 I would be posting updates about this Plugin in my [blog][4] and in [Twitter][2]. If you want to be informed when new version of this Plugin is released, then you can either subscribe to this [blog's RSS feed][3] or [follow me in Twitter][2].
 
-### Links
-
-*   [Plugin home page][1]
-*   [Author's Blog][4]
-*   [Other Plugins by the author][5]
+Also checkout the [other WordPress Plugins][5] that I have created.
 
  [1]: http://sudarmuthu.com/wordpress/wp-plugin-reviews
  [2]: http://twitter.com/sudarmuthu
  [3]: http://sudarmuthu.com/feed
  [4]: http://sudarmuthu.com/blog
  [5]: http://sudarmuthu.com/wordpress
+ [6]: http://wordpress.org/extend/plugins/wp-plugin-reviews/
 
-== Installation ==
+## Installation ##
 
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page. You should see a new widget called "WP Plugin Review" in the widgets pages, which you can drag and drop in the sidebar of your theme.
 
-== Changelog ==
+## Changelog ##
 
-= v0.1 (2013-02-11) - (Dev time: 3 hour) =
+### v0.1 (2013-02-11) - (Dev time: 3 hour) ###
 *   Initial Release
 
-= v0.2 (2013-02-13) - (Dev time: 0.5 hour) =
+### v0.2 (2013-02-13) - (Dev time: 0.5 hour) ###
 * Generated pot file
 
-== Upgrade Notice ==
+### v0.3 - (2013-04-24) - (Dev Time: 1 hour) ###
+* Added documentation
 
-= 0.2 =
+## Upgrade Notice ##
+
+### 0.2 ###
 Generated pot file
 
-==Readme Generator== 
+## Readme Generator ##
 
 This Readme file was generated using <a href = 'http://sudarmuthu.com/wordpress/wp-readme'>wp-readme</a>, which generates readme files for WordPress Plugins.

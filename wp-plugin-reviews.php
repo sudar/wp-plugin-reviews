@@ -4,7 +4,7 @@ Plugin Name: WP Plugin Reviews
 Plugin URI: http://sudarmuthu.com/wordpress/wp-plugin-reviews
 Description: Displays the latest reviews of a WordPress Plugin in the sidebar.
 Author: Sudar
-Version: 0.2
+Version: 0.3
 Author URI: http://sudarmuthu.com/
 Text Domain: wp-plugin-reviews
 
@@ -13,6 +13,8 @@ Text Domain: wp-plugin-reviews
                   - Initial Release
 2013-02-16 - v0.2 - (Dev Time: 0.5 hour)
                   - Generated Pot file
+2013-04-24 - v0.5 - (Dev Time: 1 hour)
+				  - Added documentation
 */
 
 /*  Copyright 2013  Sudar Muthu  (email : sudar@sudarmuthu.com)
@@ -34,7 +36,7 @@ Text Domain: wp-plugin-reviews
 /**
  * The main Plugin class
  *
- * @package default
+ * @package WP_Plugin_Reviews
  * @subpackage default
  * @author Sudar
  */
@@ -131,6 +133,9 @@ add_action('widgets_init', create_function('', 'return register_widget("WP_Plugi
 /**
  * WP_Plugin_Review_Widget Class
  *
+ * @package WP_Plugin_Reviews
+ * @subpackage widget
+ * @author Sudar
  */
 class WP_Plugin_Review_Widget extends WP_Widget {
     /** constructor */
