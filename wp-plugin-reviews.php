@@ -2,10 +2,11 @@
 /**
 Plugin Name: WP Plugin Reviews
 Plugin URI: http://sudarmuthu.com/wordpress/wp-plugin-reviews
-Description: Displays the latest reviews of a WordPress Plugin in the sidebar.
+Description: Displays the latest reviews of a WordPress Plugin in the sidebar
 Author: Sudar
-Version: 0.3
+Version: 0.4
 Author URI: http://sudarmuthu.com/
+Donate Link: http://sudarmuthu.com/if-you-wanna-thank-me  
 Text Domain: wp-plugin-reviews
 
 === RELEASE NOTES ===
@@ -13,8 +14,10 @@ Text Domain: wp-plugin-reviews
                   - Initial Release
 2013-02-16 - v0.2 - (Dev Time: 0.5 hour)
                   - Generated Pot file
-2013-04-24 - v0.5 - (Dev Time: 1 hour)
+2013-04-24 - v0.3 - (Dev Time: 1 hour)
 				  - Added documentation
+2013-04-26 - v0.4 - (Dev Time: 0.5 hour)
+				  - Fixed some typos and added documentation
 */
 
 /*  Copyright 2013  Sudar Muthu  (email : sudar@sudarmuthu.com)
@@ -66,8 +69,7 @@ class WP_Plugin_Reviews {
     }
 
     /**
-     * Get the github commits of a repo
-     *
+     * Get the reviews of a Plugin
      */
     public function get_plugin_reviews($plugin, $count = 5) {
 
@@ -111,6 +113,7 @@ class WP_Plugin_Reviews {
                     $output .= '<div class = "plugin-review">';
                     $output .= '<blockquote class = "plugin-review-text">' . $content . '</blockquote>';
                     $output .= '<span class = "plugin-review-author" style = "float:right">' . '- <a href = "' . esc_url($rss_item->get_permalink()) . '">' . $author_name . '</a></span><br> ';
+                    //TODO: Provide this as an option
                     //$output .= __('on', 'wp-plugin-reviews') . ' ' . $rss_item->get_date('j F Y | g:i a'); 
                     $output .= '</div>';
                 }
@@ -208,7 +211,7 @@ class WP_Plugin_Review_Widget extends WP_Widget {
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('No of commits to show:', 'wp-plugin-reviews'); ?>
+            <label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('No of reviews to show:', 'wp-plugin-reviews'); ?>
             <input class="widefat" id="<?php echo $this->get_field_id('count'); ?>" name="<?php echo $this->get_field_name('count'); ?>" type="text" value="<?php echo $count; ?>" /></label>
         </p>
 
@@ -217,7 +220,7 @@ class WP_Plugin_Review_Widget extends WP_Widget {
 } // class WP_Plugin_Review_Widget
 
 /**
- * Template function to display the badge
+ * Template function to display the reviews
  * 
  * @param string $plugin
  */
