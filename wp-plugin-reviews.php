@@ -8,6 +8,7 @@ Version: 0.4
 Author URI: http://sudarmuthu.com/
 Donate Link: http://sudarmuthu.com/if-you-wanna-thank-me  
 Text Domain: wp-plugin-reviews
+Domain Path: languages/
 
 === RELEASE NOTES ===
 2013-02-11 - v0.1 - (Dev Time: 3 hours)
