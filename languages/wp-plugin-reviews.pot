@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WP Plugin Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Plugin Reviews 0.1\n"
+"Project-Id-Version: WP Plugin Reviews 0.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-plugin-reviews\n"
-"POT-Creation-Date: 2013-02-16 10:10:33+00:00\n"
+"POT-Creation-Date: 2013-04-26 12:33:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,30 +12,31 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: wp-plugin-reviews.php:121
+#: wp-plugin-reviews.php:148
 msgid "Reviews of a WordPress Plugin"
 msgstr ""
 
-#. #-#-#-#-#  wp-plugin-reviews.pot (WP Plugin Reviews 0.1)  #-#-#-#-#
-#. Plugin Name of the plugin/theme
-#: wp-plugin-reviews.php:127
+#: wp-plugin-reviews.php:154
 msgid "WP Plugin Reviews"
 msgstr ""
 
-#: wp-plugin-reviews.php:135 wp-plugin-reviews.php:170
+#: wp-plugin-reviews.php:162 wp-plugin-reviews.php:197
 msgid "Recent Reviews"
 msgstr ""
 
-#: wp-plugin-reviews.php:178
+#: wp-plugin-reviews.php:205
 msgid "Title:"
 msgstr ""
 
-#: wp-plugin-reviews.php:183
+#: wp-plugin-reviews.php:210
 msgid "Plugin Name:"
 msgstr ""
 
-#: wp-plugin-reviews.php:188
-msgid "No of commits to show:"
+#: wp-plugin-reviews.php:215
+msgid "No of reviews to show:"
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "WP Plugin Reviews"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -43,7 +44,7 @@ msgid "http://sudarmuthu.com/wordpress/wp-plugin-reviews"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Displays the latest reviews of a WordPress Plugin in the sidebar."
+msgid "Displays the latest reviews of a WordPress Plugin in the sidebar"
 msgstr ""
 
 #. Author of the plugin/theme
