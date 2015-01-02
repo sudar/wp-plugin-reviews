@@ -6,7 +6,7 @@ Description: Displays the latest reviews of a WordPress Plugin in the sidebar
 Author: Sudar
 Version: 0.4
 Author URI: http://sudarmuthu.com/
-Donate Link: http://sudarmuthu.com/if-you-wanna-thank-me  
+Donate Link: http://sudarmuthu.com/if-you-wanna-thank-me
 Text Domain: wp-plugin-reviews
 Domain Path: languages/
 
@@ -85,12 +85,12 @@ class WP_Plugin_Reviews {
             require_once(ABSPATH . WPINC . '/feed.php');
             $rss = fetch_feed(self::REVIEW_BASE_URL . $plugin);
 
-            if (!is_wp_error( $rss ) ) { // Checks that the object is created correctly 
-                // Figure out how many total items there are, but limit it to 5. 
-                $maxitems = $rss->get_item_quantity($count); 
+            if (!is_wp_error( $rss ) ) { // Checks that the object is created correctly
+                // Figure out how many total items there are, but limit it to 5.
+                $maxitems = $rss->get_item_quantity($count);
 
                 // Build an array of all the items, starting with element 0 (first element).
-                $rss_items = $rss->get_items(0, $maxitems); 
+                $rss_items = $rss->get_items(0, $maxitems);
 
                 // TODO: Make it plugable
                 $output = '<div class = "plugin-reviews">';
@@ -115,7 +115,7 @@ class WP_Plugin_Reviews {
                     $output .= '<blockquote class = "plugin-review-text">' . $content . '</blockquote>';
                     $output .= '<span class = "plugin-review-author" style = "float:right">' . '- <a href = "' . esc_url($rss_item->get_permalink()) . '">' . $author_name . '</a></span><br> ';
                     //TODO: Provide this as an option
-                    //$output .= __('on', 'wp-plugin-reviews') . ' ' . $rss_item->get_date('j F Y | g:i a'); 
+                    //$output .= __('on', 'wp-plugin-reviews') . ' ' . $rss_item->get_date('j F Y | g:i a');
                     $output .= '</div>';
                 }
 
@@ -222,7 +222,7 @@ class WP_Plugin_Review_Widget extends WP_Widget {
 
 /**
  * Template function to display the reviews
- * 
+ *
  * @param string $plugin
  */
 function get_plugin_reviews($plugin, $count = 5) {
