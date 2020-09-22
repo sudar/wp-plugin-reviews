@@ -81,9 +81,11 @@ class WP_Plugin_Reviews {
         }
 
         $key = self::CACHE_KEY_SLUG . $plugin;
+
         if (false === ( $output = get_transient( $key ) ) ) {
             require_once(ABSPATH . WPINC . '/feed.php');
-            $rss = fetch_feed(self::REVIEW_BASE_URL . $plugin);
+            $feed_url = 'https://wordpress.org/support/plugin/' . $plugin . '/reviews/feed/';
+            $rss = fetch_feed( $feed_url );
 
             if (!is_wp_error( $rss ) ) { // Checks that the object is created correctly
                 // Figure out how many total items there are, but limit it to 5.
@@ -132,7 +134,7 @@ class WP_Plugin_Reviews {
 add_action( 'init', 'WP_Plugin_Reviews' ); function WP_Plugin_Reviews() { global $wp_plugin_reviews; $wp_plugin_reviews = new WP_Plugin_Reviews(); }
 
 // register WP_Plugin_Review_Widget widget
-add_action('widgets_init', create_function('', 'return register_widget("WP_Plugin_Review_Widget");'));
+add_action( 'widgets_init', $callback = function() { return register_widget("WP_Plugin_Review_Widget"); } );
 
 /**
  * WP_Plugin_Review_Widget Class
