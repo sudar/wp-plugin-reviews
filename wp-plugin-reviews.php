@@ -47,7 +47,7 @@ Domain Path: languages/
 class WP_Plugin_Reviews {
 
     const CACHE_KEY_SLUG = 'plugin-review-';
-    const REVIEW_BASE_URL = 'http://wordpress.org/support/rss/view/plugin-reviews/';
+    const REVIEW_BASE_URL = 'https://wordpress.org/support/plugin/';
 
     /**
      * Initalize the plugin by registering the hooks
@@ -84,8 +84,8 @@ class WP_Plugin_Reviews {
 
         if (false === ( $output = get_transient( $key ) ) ) {
             require_once(ABSPATH . WPINC . '/feed.php');
-            $feed_url = 'https://wordpress.org/support/plugin/' . $plugin . '/reviews/feed/';
-            $rss = fetch_feed( $feed_url );
+            $feed_url = self::REVIEW_BASE_URL . $plugin . '/reviews/feed/';
+            $rss      = fetch_feed( $feed_url );
 
             if (!is_wp_error( $rss ) ) { // Checks that the object is created correctly
                 // Figure out how many total items there are, but limit it to 5.
