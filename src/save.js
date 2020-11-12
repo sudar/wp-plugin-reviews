@@ -14,6 +14,6 @@ import { __ } from '@wordpress/i18n';
  *
  * @return {WPElement} Element to render.
  */
-export default function save( attributes, className ) {
-	return <div className={ className }>This is Ezhil{ attributes.message }</div>;
+export default function save( { attributes, className } ) {
+	return <div className={ className }>{ attributes.message }</div>;
 }

@@ -86,5 +86,8 @@ registerBlockType( 'create-block/review-block', {
 	/**
 	 * @see ./save.js
 	 */
-	save,
+	save( { attributes, className } ) {
+        //Gutenberg will save attributes we can use in server-side callback
+       return null;
+    },
 } );
