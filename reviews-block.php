@@ -49,6 +49,6 @@ function create_block_review_block_block_init() {
 }
 
 function get_plugin_reviews_render_callback( $attributes ) {
-	get_plugin_reviews( $attributes['message'] );
+	return get_plugin_reviews( $attributes['pluginName'] );
 }
 add_action( 'init', 'create_block_review_block_block_init' );

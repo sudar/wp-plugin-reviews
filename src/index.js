@@ -25,7 +25,6 @@ import './style.scss';
  * Internal dependencies
  */
 import Edit from './edit';
-import save from './save';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -61,20 +60,11 @@ registerBlockType( 'create-block/review-block', {
 	icon: 'smiley',
 
 	/**
-	 * Optional block extended support features.
-	 */
-	supports: {
-		// Removes support for an HTML mode.
-		html: false,
-	},
-	/**
 	 * Block stores data in attributes.
 	 */
 	attributes: {
-		message: {
+		pluginName: {
 			type: 'string',
-			source: 'text',
-			selector: 'div',
 		},
 	},
 

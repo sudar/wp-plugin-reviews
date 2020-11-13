@@ -30,8 +30,8 @@ export default function Edit( { attributes, setAttributes, className } ) {
 		<div className={ className }>
             <TextControl
                 label={ __( 'Plugin name', 'review-block' ) }
-                value={ attributes.message }
-                onChange={ ( val ) => setAttributes( { message: val } ) }
+                value={ attributes.pluginName }
+                onChange={ ( val ) => setAttributes( { pluginName: val } ) }
             />
 		</div>
 	);
