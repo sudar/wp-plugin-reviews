@@ -66,6 +66,9 @@ registerBlockType( 'create-block/review-block', {
 		pluginName: {
 			type: 'string',
 		},
+		reviewCount: {
+			type: 'number',
+		},
 	},
 
 	/**

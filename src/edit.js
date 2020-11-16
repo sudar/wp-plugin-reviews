@@ -1,4 +1,5 @@
 import { TextControl } from '@wordpress/components';
+import { NumberControl } from '@wordpress/components';
 /**
  * Retrieves the translation of text.
  *
@@ -29,9 +30,14 @@ export default function Edit( { attributes, setAttributes, className } ) {
 	return (
 		<div className={ className }>
             <TextControl
-                label={ __( 'Plugin name', 'review-block' ) }
+                label={ __( 'Plugin Name', 'review-block' ) }
                 value={ attributes.pluginName }
                 onChange={ ( val ) => setAttributes( { pluginName: val } ) }
+            />
+            <TextControl
+                label={ __( 'Reviews Count', 'review-block' ) }
+                value={ attributes.reviewCount }
+                onChange={ ( val ) => setAttributes( { reviewCount: val } ) }
             />
 		</div>
 	);
