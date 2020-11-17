@@ -77,7 +77,7 @@ class WP_Plugin_Reviews {
             return $output;
         }
 
-        $key = self::CACHE_KEY_SLUG . $plugin;
+        $key = self::CACHE_KEY_SLUG . $plugin . '_' . $count;
 
         if (false === ( $output = get_transient( $key ) ) ) {
             require_once(ABSPATH . WPINC . '/feed.php');

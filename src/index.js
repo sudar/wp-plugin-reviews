@@ -43,7 +43,7 @@ registerBlockType( 'create-block/review-block', {
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
 	description: __(
-		'Example block written with ESNext standard and JSX support – build step required.',
+		'Renders latest reviews for the given plugin.',
 		'review-block'
 	),
 
@@ -82,5 +82,5 @@ registerBlockType( 'create-block/review-block', {
 	save( { attributes, className } ) {
         //Gutenberg will save attributes we can use in server-side callback
        return null;
-    },
+	},
 } );

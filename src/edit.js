@@ -1,5 +1,5 @@
 import { TextControl } from '@wordpress/components';
-import { NumberControl } from '@wordpress/components';
+
 /**
  * Retrieves the translation of text.
  *
