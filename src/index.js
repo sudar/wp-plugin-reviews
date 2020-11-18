@@ -67,7 +67,7 @@ registerBlockType( 'create-block/review-block', {
 			type: 'string',
 		},
 		reviewCount: {
-			type: 'number',
+			type: 'string',
 		},
 	},
 
