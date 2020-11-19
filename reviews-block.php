@@ -49,7 +49,7 @@ class WP_Review_Block {
 			'editor_script'   => 'create-block-review-block-block-editor',
 			'editor_style'    => 'create-block-review-block-block-editor',
 			'style'           => 'create-block-review-block-block',
-			'render_callback' => 'get_plugin_reviews_render_callback'
+			'render_callback' => [ $this, 'get_plugin_reviews_render_callback' ]
 		) );
 	}
 
