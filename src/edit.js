@@ -1,4 +1,4 @@
-import { TextControl } from '@wordpress/components';
+import { Placeholder, TextControl } from '@wordpress/components';
 
 /**
  * Retrieves the translation of text.
@@ -26,19 +26,26 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit( { attributes, setAttributes, className } ) {
+export default function Edit( { attributes, className, isSelected, setAttributes } ) {
 	return (
 		<div className={ className }>
-            <TextControl
-                label={ __( 'Plugin Name', 'review-block' ) }
-                value={ attributes.pluginName }
-                onChange={ ( val ) => setAttributes( { pluginName: val } ) }
-            />
-            <TextControl
-                label={ __( 'Reviews Count', 'review-block' ) }
-                value={ attributes.reviewCount }
-                onChange={ ( val ) => setAttributes( { reviewCount: val } ) }
-            />
+            { ! isSelected ? (
+                "Actual review(s) will be shown."
+            ) : (
+                <Placeholder label="Reviews Block" instructions="Add plugin name and review count">
+                    <TextControl
+                        label={ __( 'Plugin Name', 'review-block' ) }
+                        value={ attributes.pluginName }
+                        onChange={ ( val ) => setAttributes( { pluginName: val } ) }
+                    />
+                    <TextControl
+                        label={ __( 'Reviews Count', 'review-block' ) }
+                        value={ attributes.reviewCount }
+                        onChange={ ( val ) => setAttributes( { reviewCount: val } ) }
+                    />
+                </Placeholder>
+            )
+            }
 		</div>
-	);
+    );
 }
