@@ -6,11 +6,17 @@
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/applying-styles-with-stylesheets/
  */
 class WPPluginReviewBlock {
+	/**
+	 * Registers review block.
+	 */
 	public function register() {
 		$this->register_block();
 	}
 
-	function register_block() {
+	/**
+	 * Registers review block and its assets.
+	 */
+	public function register_block() {
 		$dir = dirname( __FILE__ );
 
 		$script_asset_path = "$dir/build/index.asset.php";
@@ -53,7 +59,13 @@ class WPPluginReviewBlock {
 		) );
 	}
 
-	function get_plugin_reviews_render_callback( $attributes ) {
+	/**
+	 * Renders plugin reviews.
+	 *
+	 * @param array $attributes Values entered by user.
+	 * @return array Reviews of specified plugin.
+	 */
+	public function get_plugin_reviews_render_callback( $attributes ) {
 		return get_plugin_reviews( $attributes['pluginName'], absint( $attributes['reviewCount'] ) );
 	}
 

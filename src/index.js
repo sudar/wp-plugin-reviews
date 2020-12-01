@@ -43,7 +43,7 @@ registerBlockType( 'sudar/wp-plugin-review-block', {
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
 	description: __(
-		'Renders latest reviews for the given plugin.',
+		'Embed WordPress plugin reviews.',
 		'wp-plugin-reviews'
 	),
 
