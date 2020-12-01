@@ -55,7 +55,7 @@ class WP_Plugin_Reviews {
 
         // Register hooks and filters
         add_filter('plugin-reviews-title', array(&$this, 'filter_title'), 10, 3);
-        $review_block = new WP_Review_Block();
+        $review_block = new WPPluginReviewBlock();
         $review_block->register();
     }
 
@@ -221,7 +221,7 @@ class WP_Plugin_Review_Widget extends WP_Widget {
 } // class WP_Plugin_Review_Widget
 
 // Require Gutenberg review block.
-require_once 'reviews-block.php';
+require_once 'wp-plugin-review-block.php';
 
 /**
  * Template function to display the reviews

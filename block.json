@@ -1,10 +1,10 @@
 {
-	"name": "create-block/review-block",
+	"name": "sudar/wp-plugin-review-block",
 	"title": "Review Block",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
-	"textdomain": "review-block",
+	"description": "Embed WordPress plugin reviews.",
+	"textdomain": "wp-plugin-reviews",
 	"supports": {
 		"html": false
 	},

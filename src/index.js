@@ -31,12 +31,12 @@ import Edit from './edit';
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-registerBlockType( 'create-block/review-block', {
+registerBlockType( 'sudar/wp-plugin-review-block', {
 	/**
 	 * This is the display title for your block, which can be translated with `i18n` functions.
 	 * The block inserter will show this name.
 	 */
-	title: __( 'Review Block', 'review-block' ),
+	title: __( 'Review Block', 'wp-plugin-reviews' ),
 
 	/**
 	 * This is a short description for your block, can be translated with `i18n` functions.
@@ -44,7 +44,7 @@ registerBlockType( 'create-block/review-block', {
 	 */
 	description: __(
 		'Renders latest reviews for the given plugin.',
-		'review-block'
+		'wp-plugin-reviews'
 	),
 
 	/**
@@ -57,7 +57,7 @@ registerBlockType( 'create-block/review-block', {
 	 * An icon property should be specified to make it easier to identify a block.
 	 * These can be any of WordPress’ Dashicons, or a custom svg element.
 	 */
-	icon: 'smiley',
+	icon: 'star-half',
 
 	/**
 	 * Block stores data in attributes.

@@ -30,16 +30,16 @@ export default function Edit( { attributes, className, isSelected, setAttributes
 	return (
 		<div className={ className }>
             { ! isSelected ? (
-                "Actual review(s) will be shown."
+                __( 'Actual review(s) will be shown.', 'wp-plugin-reviews' )
             ) : (
                 <Placeholder label="Reviews Block" instructions="Add plugin name and review count">
                     <TextControl
-                        label={ __( 'Plugin Name', 'review-block' ) }
+                        label={ __( 'Plugin Name', 'wp-plugin-reviews' ) }
                         value={ attributes.pluginName }
                         onChange={ ( val ) => setAttributes( { pluginName: val } ) }
                     />
                     <TextControl
-                        label={ __( 'Reviews Count', 'review-block' ) }
+                        label={ __( 'Reviews Count', 'wp-plugin-reviews' ) }
                         value={ attributes.reviewCount }
                         onChange={ ( val ) => setAttributes( { reviewCount: val } ) }
                     />
