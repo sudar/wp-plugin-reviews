@@ -16,7 +16,7 @@ class WPPluginReviewBlock {
 	/**
 	 * Registers review block and its assets.
 	 */
-	public function register_block() {
+	protected function register_block() {
 		$dir = dirname( __FILE__ );
 
 		$script_asset_path = "$dir/build/index.asset.php";
