@@ -1,0 +1,14 @@
+{
+	"name": "sudar/wp-plugin-review-block",
+	"title": "Review Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Embed WordPress plugin reviews.",
+	"textdomain": "wp-plugin-reviews",
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

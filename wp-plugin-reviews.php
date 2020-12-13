@@ -9,7 +9,6 @@ Author URI: http://sudarmuthu.com/
 Donate Link: http://sudarmuthu.com/if-you-wanna-thank-me
 Text Domain: wp-plugin-reviews
 Domain Path: languages/
-
 === RELEASE NOTES ===
 2013-02-11 - v0.1 - (Dev Time: 3 hours)
                   - Initial Release
@@ -22,16 +21,13 @@ Domain Path: languages/
 */
 
 /*  Copyright 2013  Sudar Muthu  (email : sudar@sudarmuthu.com)
-
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
     published by the Free Software Foundation.
-
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-
     You should have received a copy of the GNU General Public License
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
@@ -59,6 +55,8 @@ class WP_Plugin_Reviews {
 
         // Register hooks and filters
         add_filter('plugin-reviews-title', array(&$this, 'filter_title'), 10, 3);
+        $review_block = new WPPluginReviewBlock();
+        $review_block->register();
     }
 
     /**
@@ -80,7 +78,7 @@ class WP_Plugin_Reviews {
             return $output;
         }
 
-        $key = self::CACHE_KEY_SLUG . $plugin;
+        $key = self::CACHE_KEY_SLUG . $plugin . '_' . $count;
 
         if (false === ( $output = get_transient( $key ) ) ) {
             require_once(ABSPATH . WPINC . '/feed.php');
@@ -221,6 +219,9 @@ class WP_Plugin_Review_Widget extends WP_Widget {
 <?php
     }
 } // class WP_Plugin_Review_Widget
+
+// Require Gutenberg review block.
+require_once 'wp-plugin-review-block.php';
 
 /**
  * Template function to display the reviews
